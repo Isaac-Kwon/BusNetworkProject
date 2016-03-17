@@ -1,7 +1,7 @@
 clc;
 clear;
 
-readURL = 'http://test.test.test';  %URL to recieve list of RouteID
+readURL = 'http://test.test.test/bus';  %URL to recieve list of RouteID
 Key = '000' ;  %insert Service code from Data.go.kr
 readXML = [readURL '?serviceKey='  Key];
 
@@ -34,7 +34,7 @@ Stationlist = 0;
 
 for readNum = 1 : length(Routelist)
 
-readURL = 'http://openapi.changwon.go.kr/rest/bis/BusLocation/';
+readURL = 'test.test.test/BusLocation/';
 
 readXML = [readURL '?serviceKey='  Key '&route=' num2str(Routelist(readNum))];
 
